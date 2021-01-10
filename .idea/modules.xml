@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KWL.iml" filepath="$PROJECT_DIR$/KWL.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kwl/kwl.iml" filepath="$PROJECT_DIR$/kwl/kwl.iml" />
     </modules>
   </component>
 </project>
