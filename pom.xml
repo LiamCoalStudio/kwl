@@ -6,7 +6,7 @@
 
     <artifactId>kwl</artifactId>
     <groupId>com.liamcoalstudio</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>kwl</name>
@@ -85,4 +85,12 @@
             <version>1.4.21</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub LiamCoalStudio Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/liamcoalstudio/kwl</url>
+        </repository>
+    </distributionManagement>
 </project>
