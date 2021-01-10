@@ -1,9 +1,12 @@
 package com.liamcoalstudio.kettle.kwl.entity
 
+import com.liamcoalstudio.kettle.kwl.Dimension
+import com.liamcoalstudio.kettle.kwl.KWL
+import com.liamcoalstudio.kettle.kwl.UniverseFile
 import java.io.DataInputStream
 import kotlin.math.max
 
-abstract class LivingEntity : Entity() {
+abstract class LivingEntity(universe: UniverseFile, dimension: Dimension) : Entity(universe, dimension) {
     // These are here because primitive types can't be `lateinit`
     private var health1 = 0.0
     private var damageTaken1 = 0.0
@@ -101,7 +104,7 @@ abstract class LivingEntity : Entity() {
     /** Called when [LivingEntity.damage] is called */
     protected open fun onDamage(health: Double) {}
     /** Called when [LivingEntity.damage] is called and the resulting health is less than `0.0` */
-    protected open fun onDeath(health: Double) {}
+    protected open fun onDeath(health: Double) { KWL.entityDeathHandler(universe, dimension, this) }
     /** Called when [LivingEntity.heal] or [LivingEntity.healDamage] is called */
     protected open fun onHeal(health: Double, isDamageHeal: Boolean) {}
 }

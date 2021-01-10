@@ -1,12 +1,15 @@
 package com.liamcoalstudio.kettle.kwl.entity
 
+import com.liamcoalstudio.kettle.kwl.Dimension
+import com.liamcoalstudio.kettle.kwl.UniverseFile
+import com.liamcoalstudio.kettle.kwl.KWL
 import java.io.DataInputStream
 import java.util.*
 
 /**
  * An entity, like a pig or a player.
  */
-abstract class Entity {
+abstract class Entity(val universe: UniverseFile, val dimension: Dimension) {
     /**
      * The current location of the entity.
      */
@@ -36,6 +39,13 @@ abstract class Entity {
      */
     @Suppress("unused")
     abstract fun tick()
+
+    /**
+     * Destroys this entity. Called by the default implementation of
+     * [KWL.entityDeathHandler].
+     */
+    @Suppress("unused")
+    abstract fun destroy()
 
     companion object {
         /**
