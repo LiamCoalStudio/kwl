@@ -14,7 +14,7 @@ object KWL {
      *
      * @see UniverseFile
      */
-    const val VERSION: Int = 0
+    const val VERSION: Int = 1
 
     /**
      * Handles the deaths of [LivingEntity]. You probably want to override
