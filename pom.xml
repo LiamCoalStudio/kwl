@@ -22,6 +22,10 @@
             <id>mavenCentral</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
+        <repository>
+            <id>liams_server</id>
+            <url>http://www.liamiam.com/repository/maven-releases/</url>
+        </repository>
     </repositories>
 
     <build>
@@ -88,9 +92,14 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub LiamCoalStudio Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/liamcoalstudio/kwl</url>
+            <id>liams_server</id>
+            <name>Liam's Fancy Nexus Server!</name>
+            <url>http://www.liamiam.com/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>liams_server</id>
+            <name>Liam's Fancy Nexus Server: Snapshot Edition!</name>
+            <url>http://www.liamiam.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
