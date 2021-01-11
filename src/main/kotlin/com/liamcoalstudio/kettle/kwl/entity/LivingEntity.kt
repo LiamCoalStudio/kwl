@@ -8,38 +8,9 @@ import kotlin.math.max
 
 abstract class LivingEntity(universe: UniverseFile, dimension: Dimension) : Entity(universe, dimension) {
     // These are here because primitive types can't be `lateinit`
-    private var health1 = 0.0
-    private var damageTaken1 = 0.0
-    private var damageHealed1 = 0.0
-
-    /**
-     * Health of this entity.
-     */
-    // In the form of a get/set because primitive types.
-    var health: Double
-        protected set(v) { health1 = v }
-        get() = health1
-
-    /**
-     * The amount of damage this entity has taken.
-     *
-     * Statistics?
-     */
-    // In the form of a get/set because primitive types.
-    var damageTaken: Double
-        protected set(v) { damageTaken1 = v }
-        get() = damageTaken1
-
-    /**
-     * The amount of [damageTaken] damage that has been healed.
-     *
-     * Could possibly be used for difficult entities so that they
-     * could become "easier" if enough damage was healed.
-     */
-    // In the form of a get/set because primitive types.
-    var damageHealed: Double
-        protected set(v) { damageHealed1 = v }
-        get() = damageHealed1
+    var health = 0.0
+    var damageTaken = 0.0
+    var damageHealed = 0.0
 
     /**
      * The multiplier for [healDamage]'s health argument when subtracting

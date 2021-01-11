@@ -13,8 +13,8 @@ abstract class Entity(val universe: UniverseFile, val dimension: Dimension) {
     /**
      * The current location of the entity.
      */
-    lateinit var location: Location protected set
-    lateinit var uuid: UUID protected set
+    lateinit var location: Location
+    lateinit var uuid: UUID
 
     /**
      * Reads an entity from a reader. Structure depends on the entity,
